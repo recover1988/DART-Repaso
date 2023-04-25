@@ -6,7 +6,9 @@ void main(List<String> args) {
 String greetEveryone() =>
     'Hello everyone'; // Las funciones flechas no pueden elaborar un cuerpo
 
-// int addTwoNumber(int a, int b) {
-//   return a + b;
-// }
-int addTwoNumber(int a, int b) => a + b;
+int addTwoNumber(int a, [int b = 0]) {
+  // b = b ?? 0;
+  // b ??= 0;
+  return a + b;
+}
+// int addTwoNumber(int a, [int? b ]) => a + b;
