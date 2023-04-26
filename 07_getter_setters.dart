@@ -7,7 +7,10 @@ void main(List<String> args) {
 class Square {
   double _side; // _side * _side
 
-  Square({required double side}) : _side = side;
+  Square({required double side})
+      : assert(side >= 0,
+            'side must be >= 0'), // las assertions o comprobaciones deben ir antes de asignarse el valor
+        _side = side;
 
   double calculateArea() {
     return _side * _side;
